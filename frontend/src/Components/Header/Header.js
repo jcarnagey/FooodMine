@@ -21,8 +21,7 @@ export default function Header() {
                 </Link>
                 <nav>
                     <ul>
-                        {
-                            user?
+                        {user? (
                             <li className={classes.menu_container}>
                                 <Link to="/profile">{user.name}</Link>
                                 <div className={classes.menu}>
@@ -30,9 +29,17 @@ export default function Header() {
                                     <Link to="/orders">Orders</Link>
                                     <a onClick={logout}>Logout</a>
                                 </div>
-                            </li> :
+                            </li>
+                        ) : (
                             <Link to="/login">Login</Link>
-                        }
+                        )}
+
+                        <li>
+                            <Link to="/cart">
+                                Cart
+                                {cart.totalCount > 0 && <span>{cart.totalCount}</span>}
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
