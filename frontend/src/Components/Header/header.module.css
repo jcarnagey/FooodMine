@@ -50,3 +50,16 @@
 .menu_container:hover .menu {
     display: block;
 }
+
+.menu a {
+    width: 100%;
+    min-width: 8rem;
+}
+
+.cart_count {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 0.1rem 0.45rem;
+    border-radius: 100rem;
+    font-size: 0.9rem;
+}
